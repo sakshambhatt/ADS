@@ -1,0 +1,28 @@
+
+public class Solution {
+	
+	public byte[] getFrequencyArr(char[] currWordCharArr) {
+		byte[] frequencyArr = new byte[26];
+		for(int counter = 0; counter < currWordCharArr.length; counter++) {
+			// ascii of char - ascii of a
+			int index = (int) currWordCharArr[counter] - 97;
+			frequencyArr[index] += 1;
+		}
+		return frequencyArr;
+	}
+
+	public String[] getGroupedStrings(String[] words) {
+		String[] output = new String[] { "Hello" };
+		for (int counter = 0; counter < words.length; counter++) {
+			
+			String currWord = words[counter];
+			char[] currWordChars = currWord.toCharArray();
+			byte[] frequencyArr = getFrequencyArr(currWordChars);
+			for(int i = 0; i < 26; i++) {
+				System.out.println(frequencyArr[i])
+			}
+
+		}
+		return output;
+	}
+}

@@ -1,0 +1,16 @@
+
+public class Solution {
+
+	public String[] getGroupedStrings(String[] words) {
+		String[] output = new String[] { "Hello" };
+		for (int counter = 0; counter < words.length; counter++) {
+			byte[] encode = new byte[26];
+			String currWord = words[counter];
+			char[] currWordChars = currWord.toCharArray();
+			for (int counter2 = 0; counter2 < currWordChars.length; counter2++) {
+				int index = (int) currWordChars[counter2] - 97;
+			}
+		}
+		return output;
+	}
+}

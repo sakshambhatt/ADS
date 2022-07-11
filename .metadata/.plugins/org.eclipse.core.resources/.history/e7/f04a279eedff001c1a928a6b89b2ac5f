@@ -1,0 +1,9 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String[] testCase1 = new String[] { "battery", "rybatte", "bryetta", "bayrett" };
+	}
+
+}

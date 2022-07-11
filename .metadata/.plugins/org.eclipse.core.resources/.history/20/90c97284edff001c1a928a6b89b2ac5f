@@ -1,0 +1,9 @@
+
+public class Solution {
+
+	public String[] groupedStrings(String[] words) {
+		String[] output = new String[] { "Hello" };
+
+		return output;
+	}
+}

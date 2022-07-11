@@ -1,0 +1,40 @@
+import java.util.HashMap;
+
+public class Solution {
+
+	public String getStringCode(byte[] frequencyArr) {
+		int ASCII_OF_A = 97;
+		StringBuilder sb = new StringBuilder(52);
+		for (int counter = 0; counter < 26; counter++) {
+			int asciiOfCounter = ASCII_OF_A + counter;
+			char charOfCounter = (char) asciiOfCounter;
+			sb.append(charOfCounter);
+			sb.append(Character.forDigit(frequencyArr[counter], 10));
+		}
+		return sb.toString();
+	}
+
+	public byte[] getFrequencyArr(char[] currWordCharArr) {
+		byte[] frequencyArr = new byte[26];
+		for (int counter = 0; counter < currWordCharArr.length; counter++) {
+			// ascii of char - ascii of a
+			int index = (int) currWordCharArr[counter] - 97;
+			frequencyArr[index] += 1;
+		}
+		return frequencyArr;
+	}
+
+	public String[] getGroupedStrings(String[] words) {
+		String[] output = new String[] { "Hello" };
+		HashMap<String, int[]> wordGroups = new HashMap<>();
+		for (int counter = 0; counter < words.length; counter++) {
+
+			String currWord = words[counter];
+			char[] currWordChars = currWord.toCharArray();
+			byte[] frequencyArr = getFrequencyArr(currWordChars);
+			String stringCode = getStringCode(frequencyArr);
+			
+		}
+		return output;
+	}
+}

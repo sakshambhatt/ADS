@@ -1,0 +1,6 @@
+
+public class Solution {
+	public void sayHello() {
+		System.out.println("hello");	
+	}
+}

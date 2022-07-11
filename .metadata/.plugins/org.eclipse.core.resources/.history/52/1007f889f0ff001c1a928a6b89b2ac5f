@@ -1,0 +1,9 @@
+
+public class Solution {
+
+	public String[] getGroupedStrings(String[] words) {
+		String[] output = new String[] { "Hello" };
+		System.out.println(words[1]);
+		return output;
+	}
+}
